@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OTW Dashboard — 2026-04-08</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #f8fafc; }
+  .card { background: white; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1e293b; }
+  tr:hover td { background: #f1f5f9; }
+  a { color: #2563eb; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .tab-btn { cursor: pointer; padding: 8px 20px; border-radius: 8px 8px 0 0; font-weight: 600; font-size: 0.875rem; transition: all 0.15s; }
+  .tab-btn.active { background: white; color: #1e293b; box-shadow: 0 -1px 3px rgba(0,0,0,0.06); }
+  .tab-btn:not(.active) { background: transparent; color: #64748b; }
+  .tab-btn:not(.active):hover { color: #334155; background: rgba(255,255,255,0.5); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+</style>
+</head>
+<body class="p-4 md:p-8 max-w-7xl mx-auto">
+
+<!-- Header -->
+<div class="flex items-center justify-between mb-6">
+  <div>
+    <h1 class="text-2xl font-bold text-gray-900">OTW Dashboard</h1>
+    <p class="text-sm text-gray-500">Updated Apr 08, 2026 at 03:29 PM</p>
+  </div>
+  <button onclick="location.reload()" class="px-3 py-1.5 text-sm font-medium text-gray-600 bg-white border border-gray-200 rounded-lg hover:bg-gray-50">Refresh</button>
+</div>
+
+<!-- Summary Cards -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+  <div class="card p-4">
+    <div class="text-2xl font-bold text-gray-900">2</div>
+    <div class="text-xs text-gray-500 mt-1">CORP Roles</div>
+    <div class="text-xs text-blue-600 mt-0.5">1 new &middot; 0 in progress</div>
+  </div>
+  <div class="card p-4">
+    <div class="text-2xl font-bold text-gray-900">20</div>
+    <div class="text-xs text-gray-500 mt-1">Company Folders</div>
+  </div>
+  <div class="card p-4">
+    <div class="text-2xl font-bold text-gray-900">28</div>
+    <div class="text-xs text-gray-500 mt-1">EIR Programs</div>
+    <div class='text-xs text-red-600 mt-0.5 font-medium'>2 due within 14 days</div>
+  </div>
+  <div class="card p-4">
+    <div class="text-2xl font-bold text-gray-900">7</div>
+    <div class="text-xs text-gray-500 mt-1">Hackathons</div>
+  </div>
+  <div class="card p-4">
+    <div class="text-2xl font-bold text-gray-900">15</div>
+    <div class="text-xs text-gray-500 mt-1">Jobs Found</div>
+    <div class="text-xs text-gray-400 mt-0.5">2026-03-27</div>
+  </div>
+</div>
+
+<!-- Tabs -->
+<div class="flex gap-1 bg-gray-100 p-1 rounded-t-xl">
+  <div class="tab-btn active" data-tab="corp">CORP Pipeline</div>
+  <div class="tab-btn" data-tab="folders">Company Folders</div>
+  <div class="tab-btn" data-tab="eir">EIR Programs</div>
+  <div class="tab-btn" data-tab="hack">Hackathons</div>
+  <div class="tab-btn" data-tab="jobs">Recent Jobs</div>
+</div>
+<div id="tab-corp" class="tab-panel active card rounded-t-none p-4 mb-6">
+<div class="overflow-x-auto">
+<table class="w-full text-sm">
+<thead><tr class="text-left text-xs text-gray-500 border-b">
+  <th class="pb-2 pr-3">Date</th>
+  <th class="pb-2 pr-3">Company</th>
+  <th class="pb-2 pr-3">Role</th>
+  <th class="pb-2 pr-3">Salary</th>
+  <th class="pb-2 pr-3">Score</th>
+  <th class="pb-2 pr-3">Tier</th>
+  <th class="pb-2 pr-3">Status</th>
+  <th class="pb-2">Link</th>
+</tr></thead><tbody>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-500">2026-04-06</td>
+  <td class="py-2 pr-3 font-medium">Physical Intelligence</td>
+  <td class="py-2 pr-3">Head of Production Operations</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">88</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐⭐ Exceptional Match</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2"><a href="https://jobs.ashbyhq.com/physicalintelligence/6d2adda0-fcc2-4580-a05a-bba427093640" target="_blank" class="text-xs">Apply</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-500">2026-03-20</td>
+  <td class="py-2 pr-3 font-medium">Nvidia</td>
+  <td class="py-2 pr-3">Manager</td>
+  <td class="py-2 pr-3 text-xs"> Structural Test Engineering</td>
+  <td class="py-2 pr-3 text-xs">$184,000–$287,500</td>
+  <td class="py-2 pr-3 text-xs">95%</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">4.6</span></td>
+  <td class="py-2"><a href="T1" target="_blank" class="text-xs">Apply</a></td>
+</tr></tbody></table></div></div><div id="tab-folders" class="tab-panel card rounded-t-none p-4 mb-6"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">AtomicMachines</div>
+    <div class="text-xs text-gray-400"></div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1"></div>
+  <div class="text-xs text-gray-500 mb-2"> </div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/2</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Apply via Greenhouse: https://job-boards.greenhouse.io/atomicmachines</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Find referral contact at Atomic Machines</div></div>
+  <div class="flex gap-2">
+    
+    <span class="text-xs text-gray-400">CORP/AtomicMachines</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">Physical Intelligence (π)</div>
+    <div class="text-xs text-gray-400">2026-04-06</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Head of Production Operations</div>
+  <div class="text-xs text-gray-500 mb-2">⭐⭐⭐⭐ Exceptional Match </div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/5</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Resume reviewed</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Applied</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Interview</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Offer</div></div>
+  <div class="flex gap-2">
+    <a href='https://jobs.ashbyhq.com/physicalintelligence/6d2adda0-fcc2-4580-a05a-bba427093640' target='_blank' class='text-xs text-blue-600'>Apply &rarr;</a>
+    <span class="text-xs text-gray-400">CORP/Physical_Intelligence</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">Calyxo, Inc.</div>
+    <div class="text-xs text-gray-400">2026-03-27</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Director, Design Quality Assurance</div>
+  <div class="text-xs text-gray-500 mb-2"> &middot; $200,000 – $230,000 base + variable incentive + stock options</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/5</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Resume reviewed</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Applied</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Interview</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Offer</div></div>
+  <div class="flex gap-2">
+    <a href='https://job-boards.greenhouse.io/calyxo/jobs/5078863007' target='_blank' class='text-xs text-blue-600'>Apply &rarr;</a>
+    <span class="text-xs text-gray-400">CORP/calyxo</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">Chef Robotics</div>
+    <div class="text-xs text-gray-400">2026-03-22</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Head of Hardware</div>
+  <div class="text-xs text-gray-500 mb-2">⭐⭐⭐ Strong Match (score: 62) </div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/5</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Resume reviewed</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Applied</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Interview</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Offer</div></div>
+  <div class="flex gap-2">
+    <a href='https://www.linkedin.com/jobs/view/4366907710/' target='_blank' class='text-xs text-blue-600'>Apply &rarr;</a>
+    <span class="text-xs text-gray-400">CORP/chef_robotics</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">CoreWeave</div>
+    <div class="text-xs text-gray-400">2026-03-22</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Director, Hardware Quality &amp; NPI Operations</div>
+  <div class="text-xs text-gray-500 mb-2">⭐⭐⭐ Strong Match (score: 67) &middot; $180,000 – $264,000/yr</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/5</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Resume reviewed</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Applied</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Interview</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Offer</div></div>
+  <div class="flex gap-2">
+    <a href='https://www.linkedin.com/jobs/view/4345004703/' target='_blank' class='text-xs text-blue-600'>Apply &rarr;</a>
+    <span class="text-xs text-gray-400">CORP/coreweave</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">d-Matrix</div>
+    <div class="text-xs text-gray-400">2026-03-20</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Director, Hardware Manufacturing Engineering</div>
+  <div class="text-xs text-gray-500 mb-2">⭐⭐⭐ Strong Match (score: 40) </div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/5</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Resume reviewed</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Applied</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Interview</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Offer</div></div>
+  <div class="flex gap-2">
+    <a href='https://jobs.ashbyhq.com/d-matrix/74b13658-d361-4660-93f9-f375f66a3796' target='_blank' class='text-xs text-blue-600'>Apply &rarr;</a>
+    <span class="text-xs text-gray-400">CORP/d_matrix</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">Dandy</div>
+    <div class="text-xs text-gray-400">2026-03-20</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Sr. Mechatronics Architect</div>
+  <div class="text-xs text-gray-500 mb-2">⭐⭐⭐ Strong Match &middot; $221,000 – $268,000/yr + equity + bonus</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-blue-500 h-1.5 rounded-full" style="width:40%"></div></div>
+  <span class="text-xs text-gray-500">2/5</span>
+</div>
+<div class="text-xs text-green-600"><span class="mr-1">&#10003;</span>Resume reviewed</div>
+<div class="text-xs text-green-600"><span class="mr-1">&#10003;</span>Applied — 2026-03-20</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Interview</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Offer</div></div>
+  <div class="flex gap-2">
+    <a href='https://jobs.ashbyhq.com/dandy/ba685fa2-a5b7-469a-8ee9-5423aad479bf' target='_blank' class='text-xs text-blue-600'>Apply &rarr;</a>
+    <span class="text-xs text-gray-400">CORP/dandy</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">Confidential via Experis (ManpowerGroup staffing)</div>
+    <div class="text-xs text-gray-400">2026-03-28</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Director, Manufacturing Engineering</div>
+  <div class="text-xs text-gray-500 mb-2">⭐⭐⭐⭐ Exceptional Match &middot; Not listed</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/7</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Resume reviewed</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Contacted recruiter (matthew.oakley@experis.com)</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Client company identified</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Applied</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400">+2 more</div></div>
+  <div class="flex gap-2">
+    
+    <span class="text-xs text-gray-400">CORP/experis_serverMfg</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">Honeywell</div>
+    <div class="text-xs text-gray-400">2026-03-21</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Director of Manufacturing Engineering - Honeywell</div>
+  <div class="text-xs text-gray-500 mb-2">⭐⭐⭐ Strong Match (score: 82) </div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/5</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Resume reviewed</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Applied</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Interview</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Offer</div></div>
+  <div class="flex gap-2">
+    <a href='https://builtin.com/job/director-manufacturing-engineering/8808054' target='_blank' class='text-xs text-blue-600'>Apply &rarr;</a>
+    <span class="text-xs text-gray-400">CORP/honeywell</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">johnsonmedtech</div>
+    <div class="text-xs text-gray-400"></div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1"></div>
+  <div class="text-xs text-gray-500 mb-2"> </div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/2</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Apply at careers.jnj.com/en/jobs/r-046164</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Find J&J referral contact</div></div>
+  <div class="flex gap-2">
+    
+    <span class="text-xs text-gray-400">CORP/johnsonmedtech</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">Lightmatter, Inc.</div>
+    <div class="text-xs text-gray-400">2026-03-28</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Director, NPI Operations</div>
+  <div class="text-xs text-gray-500 mb-2">⭐⭐⭐⭐ Exceptional Match &middot; Not listed (Series C+ unicorn, $1.2B valuation)</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/5</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Resume reviewed</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Applied</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Interview</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Offer</div></div>
+  <div class="flex gap-2">
+    <a href='https://job-boards.greenhouse.io/lightmatter/jobs/5156687008' target='_blank' class='text-xs text-blue-600'>Apply &rarr;</a>
+    <span class="text-xs text-gray-400">CORP/lightmatter</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">Nokia</div>
+    <div class="text-xs text-gray-400">2026-03-22</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Director, Manufacturing Systems &amp; Operations</div>
+  <div class="text-xs text-gray-500 mb-2">⭐⭐⭐ Strong Match (score: 40) </div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/5</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Resume reviewed</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Applied</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Interview</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Offer</div></div>
+  <div class="flex gap-2">
+    <a href='https://www.linkedin.com/jobs/view/4385753008/' target='_blank' class='text-xs text-blue-600'>Apply &rarr;</a>
+    <span class="text-xs text-gray-400">CORP/nokia</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">NVIDIA</div>
+    <div class="text-xs text-gray-400">2026-03-22</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Director, Repair Factory Operations</div>
+  <div class="text-xs text-gray-500 mb-2">⭐⭐⭐ Strong Match (score: 45) &middot; $216,000 – $339,250/yr</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/5</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Resume reviewed</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Applied</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Interview</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Offer</div></div>
+  <div class="flex gap-2">
+    <a href='https://www.linkedin.com/jobs/view/4385182759/' target='_blank' class='text-xs text-blue-600'>Apply &rarr;</a>
+    <span class="text-xs text-gray-400">CORP/nvidia</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">openai</div>
+    <div class="text-xs text-gray-400"></div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1"></div>
+  <div class="text-xs text-gray-500 mb-2"> </div>
+  <div class="mb-2"><span class="text-gray-400 text-xs">No checklist</span></div>
+  <div class="flex gap-2">
+    
+    <span class="text-xs text-gray-400">CORP/openai</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">oura</div>
+    <div class="text-xs text-gray-400"></div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1"></div>
+  <div class="text-xs text-gray-500 mb-2"> </div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/3</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Send LinkedIn message to Brian Lynch</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Attach CY_2026_Oura.docx (or CY_2026.pdf) to message</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Monitor Oura job postings for Director-level hardware roles: https://ouraring.com/careers</div></div>
+  <div class="flex gap-2">
+    
+    <span class="text-xs text-gray-400">CORP/oura</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">PDW</div>
+    <div class="text-xs text-gray-400">2026-03-20</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Sr. Director, NPI Supply Chain @ PDW</div>
+  <div class="text-xs text-gray-500 mb-2">⭐⭐⭐ Strong Match (score: 110) </div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/5</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Resume reviewed</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Applied</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Interview</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Offer</div></div>
+  <div class="flex gap-2">
+    <a href='https://talent.squadra.vc/companies/pdw/jobs/66239325-sr-director-npi-supply-chain' target='_blank' class='text-xs text-blue-600'>Apply &rarr;</a>
+    <span class="text-xs text-gray-400">CORP/pdw</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">purestorage</div>
+    <div class="text-xs text-gray-400"></div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1"></div>
+  <div class="text-xs text-gray-500 mb-2"> </div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/2</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Apply via Pure Storage Greenhouse: https://job-boards.greenhouse.io/purestorage</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Find referral contact at Pure Storage</div></div>
+  <div class="flex gap-2">
+    
+    <span class="text-xs text-gray-400">CORP/purestorage</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">Roku</div>
+    <div class="text-xs text-gray-400">2026-03-28</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Director, Manufacturing Operations — Players &amp; Remotes</div>
+  <div class="text-xs text-gray-500 mb-2">⭐⭐⭐⭐ Exceptional Match &middot; $285,000 – $305,000 base + equity</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/5</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Resume reviewed</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Applied</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Interview</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Offer</div></div>
+  <div class="flex gap-2">
+    <a href='https://www.weareroku.com/jobs/director-of-manufacturing-operations-players-remotes-san-jose-california-united-states' target='_blank' class='text-xs text-blue-600'>Apply &rarr;</a>
+    <span class="text-xs text-gray-400">CORP/roku</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">sesame</div>
+    <div class="text-xs text-gray-400"></div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1"></div>
+  <div class="text-xs text-gray-500 mb-2"> </div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/2</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Apply via LinkedIn (job ID 4354212517) or jobs.ashbyhq.com/sesame</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Find referral contact at Sesame (Nate Mitchell / Brendan Iribe connection via Oculus network?)</div></div>
+  <div class="flex gap-2">
+    
+    <span class="text-xs text-gray-400">CORP/sesame</span>
+  </div>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="flex items-start justify-between mb-1">
+    <div class="font-medium text-sm">Zoox</div>
+    <div class="text-xs text-gray-400">2026-03-22</div>
+  </div>
+  <div class="text-xs text-gray-600 mb-1">Sr. TPM, Manufacturing Engineering / General Assembly</div>
+  <div class="text-xs text-gray-500 mb-2">⭐⭐⭐ Strong Match (score: 52) &middot; $186,000 – $233,000/yr</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/5</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Resume reviewed</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Applied</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Phone screen scheduled</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Interview</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Offer</div></div>
+  <div class="flex gap-2">
+    <a href='https://www.linkedin.com/jobs/view/4388138815/' target='_blank' class='text-xs text-blue-600'>Apply &rarr;</a>
+    <span class="text-xs text-gray-400">CORP/zoox</span>
+  </div>
+</div></div></div><div id="tab-eir" class="tab-panel card rounded-t-none p-4 mb-6">
+<div class="overflow-x-auto">
+<table class="w-full text-sm">
+<thead><tr class="text-left text-xs text-gray-500 border-b">
+  <th class="pb-2 pr-3">Deadline</th>
+  <th class="pb-2 pr-3">Program</th>
+  <th class="pb-2 pr-3">Organization</th>
+  <th class="pb-2 pr-3">Funding</th>
+  <th class="pb-2 pr-3">Salary</th>
+  <th class="pb-2 pr-3">Fit</th>
+  <th class="pb-2 pr-3">Status</th>
+  <th class="pb-2">Link</th>
+</tr></thead><tbody>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-200 text-gray-500 line-through">2026-04-06 (passed)</span></td>
+  <td class="py-2 pr-3 font-medium">Catalyst</td>
+  <td class="py-2 pr-3 text-xs">Outcast Ventures</td>
+  <td class="py-2 pr-3 text-xs">$500K + $1M credits</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2"><a href="https://catalyst.outcastventures.com" target="_blank" class="text-xs">Apply</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">~2026-04 (7d)</span></td>
+  <td class="py-2 pr-3 font-medium">Speedrun SR007</td>
+  <td class="py-2 pr-3 text-xs">a16z</td>
+  <td class="py-2 pr-3 text-xs">Up to $1M</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">Monitor</span></td>
+  <td class="py-2"><a href="https://speedrun.a16z.com" target="_blank" class="text-xs">Apply</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">~2026-04 (7d)</span></td>
+  <td class="py-2 pr-3 font-medium">Embark Deep Tech</td>
+  <td class="py-2 pr-3 text-xs">CU Boulder</td>
+  <td class="py-2 pr-3 text-xs">$100K fund</td>
+  <td class="py-2 pr-3 text-xs">$49K stipend</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">2026-05-01 (23d)</span></td>
+  <td class="py-2 pr-3 font-medium">Founder Residency</td>
+  <td class="py-2 pr-3 text-xs">Roux / Northeastern</td>
+  <td class="py-2 pr-3 text-xs">Free</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2"><a href="https://roux.northeastern.edu" target="_blank" class="text-xs">Apply</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">~2026-07 (98d)</span></td>
+  <td class="py-2 pr-3 font-medium">CDL Robotics</td>
+  <td class="py-2 pr-3 text-xs">Creative Destruction Lab</td>
+  <td class="py-2 pr-3 text-xs">None</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">~2026-10 (190d)</span></td>
+  <td class="py-2 pr-3 font-medium">YC W2027</td>
+  <td class="py-2 pr-3 text-xs">Y Combinator</td>
+  <td class="py-2 pr-3 text-xs">$500K</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">~2027-03 (341d)</span></td>
+  <td class="py-2 pr-3 font-medium">Physical AI Fellowship</td>
+  <td class="py-2 pr-3 text-xs">MassRobotics</td>
+  <td class="py-2 pr-3 text-xs">$200K AWS credits</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">DESCOvery EIR</td>
+  <td class="py-2 pr-3 text-xs">D.E. Shaw</td>
+  <td class="py-2 pr-3 text-xs">None</td>
+  <td class="py-2 pr-3 text-xs">$175K–$250K/yr (W-2)</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">Innovation Crossroads</td>
+  <td class="py-2 pr-3 text-xs">ORNL (DOE)</td>
+  <td class="py-2 pr-3 text-xs">$350K R&amp;D grant</td>
+  <td class="py-2 pr-3 text-xs">$115K/yr</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">Chain Reaction Innovations</td>
+  <td class="py-2 pr-3 text-xs">Argonne (DOE)</td>
+  <td class="py-2 pr-3 text-xs">Lab access</td>
+  <td class="py-2 pr-3 text-xs">$110K/yr + $12K travel</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">West Gate</td>
+  <td class="py-2 pr-3 text-xs">NREL (DOE)</td>
+  <td class="py-2 pr-3 text-xs">$175K R&amp;D</td>
+  <td class="py-2 pr-3 text-xs">$100K/yr</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">Managing Director</td>
+  <td class="py-2 pr-3 text-xs">Techstars</td>
+  <td class="py-2 pr-3 text-xs">None</td>
+  <td class="py-2 pr-3 text-xs">$165K–$220K/yr</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">Staff / Principal</td>
+  <td class="py-2 pr-3 text-xs">500 Startups</td>
+  <td class="py-2 pr-3 text-xs">None</td>
+  <td class="py-2 pr-3 text-xs">~$166K/yr</td>
+  <td class="py-2 pr-3 text-xs">⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">Inception Fund EIR</td>
+  <td class="py-2 pr-3 text-xs">Menlo Labs / Menlo Ventures</td>
+  <td class="py-2 pr-3 text-xs">$100K SAFE + follow-on</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2"><a href="https://airtable.com/appsgAjNoZGXg0c9n/shrFR6IhwlsmTeSLM" target="_blank" class="text-xs">Apply</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">Founder-in-Residence</td>
+  <td class="py-2 pr-3 text-xs">Afore Capital</td>
+  <td class="py-2 pr-3 text-xs">$100K–$500K</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2"><a href="https://airtable.com/apprAAsE4JhFBd8nL/pagGsh6fhh1fzZv6t/form" target="_blank" class="text-xs">Apply</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">EIR</td>
+  <td class="py-2 pr-3 text-xs">Lux Capital</td>
+  <td class="py-2 pr-3 text-xs">Spinout equity</td>
+  <td class="py-2 pr-3 text-xs">$40K–$120K/yr stipend</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">EIR</td>
+  <td class="py-2 pr-3 text-xs">Playground Global</td>
+  <td class="py-2 pr-3 text-xs">$1M–$20M</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">EIR</td>
+  <td class="py-2 pr-3 text-xs">Khosla Ventures</td>
+  <td class="py-2 pr-3 text-xs">Spinout equity</td>
+  <td class="py-2 pr-3 text-xs">$80K–$150K/yr stipend</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">EIR</td>
+  <td class="py-2 pr-3 text-xs">DCVC</td>
+  <td class="py-2 pr-3 text-xs">Spinout equity</td>
+  <td class="py-2 pr-3 text-xs">$60K–$120K/yr stipend</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">EIR</td>
+  <td class="py-2 pr-3 text-xs">Qualcomm Ventures</td>
+  <td class="py-2 pr-3 text-xs">Negotiable</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">EIR</td>
+  <td class="py-2 pr-3 text-xs">NEA</td>
+  <td class="py-2 pr-3 text-xs">Spinout equity</td>
+  <td class="py-2 pr-3 text-xs">$100K–$200K/yr stipend</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">Edge / EIR</td>
+  <td class="py-2 pr-3 text-xs">Greylock</td>
+  <td class="py-2 pr-3 text-xs">Pre-seed possible</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">US Residency</td>
+  <td class="py-2 pr-3 text-xs">Antler</td>
+  <td class="py-2 pr-3 text-xs">$100K–$190K + $650K credits</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">EIR / NEXT</td>
+  <td class="py-2 pr-3 text-xs">Samsung NEXT</td>
+  <td class="py-2 pr-3 text-xs">$500K–$5M</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">Hardware Residency</td>
+  <td class="py-2 pr-3 text-xs">The Engine (MIT)</td>
+  <td class="py-2 pr-3 text-xs">Seed–Series A</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Invite-only</span></td>
+  <td class="py-2 pr-3 font-medium">EIR</td>
+  <td class="py-2 pr-3 text-xs">Google X</td>
+  <td class="py-2 pr-3 text-xs">Google RSUs + spinout</td>
+  <td class="py-2 pr-3 text-xs">$300K–$500K+ (Google TC)</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">Rolling</span></td>
+  <td class="py-2 pr-3 font-medium">HAX Seed</td>
+  <td class="py-2 pr-3 text-xs">HAX / SOSV</td>
+  <td class="py-2 pr-3 text-xs">$250K</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3"><span class="text-sm text-gray-500">Winter 2026</span></td>
+  <td class="py-2 pr-3 font-medium">Residency</td>
+  <td class="py-2 pr-3 text-xs">Focal VC</td>
+  <td class="py-2 pr-3 text-xs">$25K–$50K SAFE + $1M</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">⭐</td>
+  <td class="py-2 pr-3"><span class="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">New</span></td>
+  <td class="py-2">—</td>
+</tr></tbody></table></div></div><div id="tab-hack" class="tab-panel card rounded-t-none p-4 mb-6"><div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="font-medium text-sm mb-1">Google × LEGO Robotics Competition (XPRIZE Framework)</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/4</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Monitor full competition rules at xprize.org</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Identify 1–2 potential team members (robotics engineer + software lead)</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Draft proposal outline by June 2026</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Submit by **July 1, 2026**</div></div>
+  <span class="text-xs text-gray-400">Hackathon/Google_LEGO_XPRIZE</span>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="font-medium text-sm mb-1">Hello Tomorrow — Global Deep Tech Challenge</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/4</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Check application deadline: https://hello-tomorrow.org/global-challenge/</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Submit application immediately if still open</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Prepare 1-page concept brief for application</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Plan Amsterdam travel if selected</div></div>
+  <span class="text-xs text-gray-400">Hackathon/Hello_Tomorrow</span>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="font-medium text-sm mb-1">Infineon Humanoid Robotics Startup Challenge</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/4</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Define concept by May 1</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Draft 2-min pitch video script</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Complete 1-page concept deck</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>**Submit by May 27, 2026**: https://www.infineon.com/partners/startups/humanoid-robotics</div></div>
+  <span class="text-xs text-gray-400">Hackathon/Infineon_Humanoid</span>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="font-medium text-sm mb-1">K-Hacks — Humanoid Robot Hackathon</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/3</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Monitor registration: https://luma.com/khacks.0.2</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Build minimal demo for hackathon format</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Register when dates are confirmed</div></div>
+  <span class="text-xs text-gray-400">Hackathon/K_Hacks</span>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="font-medium text-sm mb-1">MassRobotics — Form and Function Robotics Challenge</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/2</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Register for Robotics Summit & Expo: https://www.roboticssummit.com (May 27–28, Boston)</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Monitor 2027 competition application: https://www.massrobotics.org/form-function-challenge/</div></div>
+  <span class="text-xs text-gray-400">Hackathon/MassRobotics_Challenge</span>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="font-medium text-sm mb-1">NVIDIA GTC 2026 — Hackathons + Physical AI Ecosystem</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/4</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>**Apply to NVIDIA Inception now (free)**: https://www.nvidia.com/en-us/startups/</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Monitor Cosmos Cookoff next cycle: https://developer.nvidia.com/gtc-hackathon</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Register for GTC 2027 when announced (~Jan 2027)</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Monitor NVIDIA × REVEL hackathon next cycle</div></div>
+  <span class="text-xs text-gray-400">Hackathon/NVIDIA_GTC</span>
+</div>
+<div class="border border-gray-100 rounded-lg p-3">
+  <div class="font-medium text-sm mb-1">Startup World Cup</div>
+  <div class="mb-2"><div class="flex items-center gap-2 mb-1">
+  <div class="w-24 bg-gray-200 rounded-full h-1.5"><div class="bg-gray-300 h-1.5 rounded-full" style="width:0%"></div></div>
+  <span class="text-xs text-gray-500">0/3</span>
+</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Register for regional round: https://www.startupworldcup.io</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Prepare 5-minute pitch deck</div>
+<div class="text-xs text-gray-400"><span class="mr-1">&#9675;</span>Monitor 2026 schedule and deadlines</div></div>
+  <span class="text-xs text-gray-400">Hackathon/Startup_World_Cup</span>
+</div></div></div><div id="tab-jobs" class="tab-panel card rounded-t-none p-4 mb-6"><p class="text-xs text-gray-400 mb-3">Source: jobs_to_review.md (2026-03-27)</p>
+<div class="overflow-x-auto">
+<table class="w-full text-sm">
+<thead><tr class="text-left text-xs text-gray-500 border-b">
+  <th class="pb-2 pr-3">#</th>
+  <th class="pb-2 pr-3">Tier</th>
+  <th class="pb-2 pr-3">Score</th>
+  <th class="pb-2 pr-3">Salary</th>
+  <th class="pb-2 pr-3">Role</th>
+  <th class="pb-2 pr-3">Company</th>
+  <th class="pb-2">Link</th>
+</tr></thead><tbody>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">1</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐ Strong Match | 110</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">Sr. Director, NPI Supply Chain @ PDW</td>
+  <td class="py-2 pr-3 font-medium">Squadra Job</td>
+  <td class="py-2 pr-3">PDW</td>
+  <td class="py-2"><a href="https://talent.squadra.vc/companies/pdw/jobs/66239325-sr-director-npi-supply-chain" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">2</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐ Strong Match</td>
+  <td class="py-2 pr-3 text-xs">98</td>
+  <td class="py-2 pr-3 text-xs">$240,000 – $280,000/yr</td>
+  <td class="py-2 pr-3 font-medium">Sr. Director of Test Engineering - qatestingjobs.c</td>
+  <td class="py-2 pr-3">Qatestingjobs</td>
+  <td class="py-2"><a href="https://qatestingjobs.com/jobs/299159-sr-director-of-test-engineering" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">3</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐ Strong Match</td>
+  <td class="py-2 pr-3 text-xs">97</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 font-medium">VP, Hardware Engineering – Matter Compiler</td>
+  <td class="py-2 pr-3">Atomic Machines</td>
+  <td class="py-2"><a href="https://job-boards.greenhouse.io/atomicmachines/jobs/4077593009" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">4</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐ Strong Match</td>
+  <td class="py-2 pr-3 text-xs">86</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 font-medium">Director, Hardware Quality &amp; NPI Operations - Buil</td>
+  <td class="py-2 pr-3">Unknown</td>
+  <td class="py-2"><a href="https://builtin.com/job/director-hardware-quality-npi-operations/8031828" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">5</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐ Strong Match | 61</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 text-xs">Director,TestEngineeringjobin...</td>
+  <td class="py-2 pr-3 font-medium">Renesas Careers</td>
+  <td class="py-2 pr-3">Renesas</td>
+  <td class="py-2"><a href="https://jobs.renesas.com/job/director-test-engineering-in-s-hertogenbosch-netherlands-jid-2210" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">6</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐ Strong Match</td>
+  <td class="py-2 pr-3 text-xs">60</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 font-medium">Job Application for Director, Product Marketing (H</td>
+  <td class="py-2 pr-3">Unknown</td>
+  <td class="py-2"><a href="https://job-boards.greenhouse.io/oura/jobs/4194802009" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">7</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐ Strong Match</td>
+  <td class="py-2 pr-3 text-xs">56</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 font-medium">Director-NPI&amp; Sustenance with 14 - 16 Years of Exp</td>
+  <td class="py-2 pr-3">Foundit</td>
+  <td class="py-2"><a href="https://www.foundit.in/job/director-npi-sustenance-michael-page-bengaluru-bangalore-43778550" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">8</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐ Strong Match</td>
+  <td class="py-2 pr-3 text-xs">52</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 font-medium">Senior Manager of Manufacturing Engineering - Boei</td>
+  <td class="py-2 pr-3">Boeing</td>
+  <td class="py-2"><a href="https://jobs.boeing.com/job/el-segundo/senior-manager-of-manufacturing-engineering-millennium-space-systems/185/93021198656" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">9</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐⭐ Strong Match</td>
+  <td class="py-2 pr-3 text-xs">42</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 font-medium">Director, Hardware Engineering – AI/SoC - tech-int</td>
+  <td class="py-2 pr-3">Tech Integrated</td>
+  <td class="py-2"><a href="https://tech-integrated.com/jobs/director-hardware-engineering-ai-soc/" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">10</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐ Good Match</td>
+  <td class="py-2 pr-3 text-xs">35</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 font-medium">Manufacturing Director Job Description (Updated 20</td>
+  <td class="py-2 pr-3">Acbsp</td>
+  <td class="py-2"><a href="https://careers.acbsp.org/career/manufacturing-director/job-descriptions" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">11</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐ Good Match</td>
+  <td class="py-2 pr-3 text-xs">25</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 font-medium">Director, Hardware Quality &amp; NPI for AI Infrastruc</td>
+  <td class="py-2 pr-3">Mediabistro</td>
+  <td class="py-2"><a href="https://www.mediabistro.com/jobs/3011529801-director-hardware-quality-npi-for-ai-infrastructure" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">12</td>
+  <td class="py-2 pr-3 text-xs">⭐⭐ Good Match | 22</td>
+  <td class="py-2 pr-3 text-xs">$97,000 – $192,000/yr</td>
+  <td class="py-2 pr-3 text-xs">Manufacturing Director Salary in 2026</td>
+  <td class="py-2 pr-3 font-medium">PayScale</td>
+  <td class="py-2 pr-3">Payscale</td>
+  <td class="py-2"><a href="https://www.payscale.com/research/US/Job=Manufacturing_Director/Salary" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">13</td>
+  <td class="py-2 pr-3 text-xs">⭐ Moderate</td>
+  <td class="py-2 pr-3 text-xs">20</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 font-medium">Director,HardwareManufacturingEngineering@ d-Matri</td>
+  <td class="py-2 pr-3">Unknown</td>
+  <td class="py-2"><a href="https://jobs.ashbyhq.com/d-matrix/74b13658-d361-4660-93f9-f375f66a3796" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">14</td>
+  <td class="py-2 pr-3 text-xs">⭐ Moderate</td>
+  <td class="py-2 pr-3 text-xs">19</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 font-medium">Head of Engineering, Senai Malaysia (EMS Industry)</td>
+  <td class="py-2 pr-3">SearchLab</td>
+  <td class="py-2"><a href="https://www.searchlab.com.sg/head-of-engineering-senai-malaysia-ems-industry/" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr>
+<tr class="border-b border-gray-50">
+  <td class="py-2 pr-3 text-xs text-gray-400">15</td>
+  <td class="py-2 pr-3 text-xs"></td>
+  <td class="py-2 pr-3 text-xs">9</td>
+  <td class="py-2 pr-3 text-xs">—</td>
+  <td class="py-2 pr-3 font-medium">Director of Contract Manufacturing Operations - Ev</td>
+  <td class="py-2 pr-3">Evolv</td>
+  <td class="py-2"><a href="https://apply.workable.com/evolv-technology/j/A16C3DD425/" target="_blank" class="text-xs">View &rarr;</a></td>
+</tr></tbody></table></div></div>
+<div class="text-center text-xs text-gray-400 mt-8 mb-4">
+  OTW Dashboard &middot; Built {TODAY_S} &middot; <a href="https://github.com/{_gh_repo()}" target="_blank">Source</a>
+</div>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
